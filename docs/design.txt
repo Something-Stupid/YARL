@@ -1,0 +1,5 @@
+Thing to remember
+
+    1.) Don't have #include hell
+    2.) KISS
+

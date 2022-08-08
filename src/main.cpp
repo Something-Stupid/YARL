@@ -1,10 +1,8 @@
 #ifdef __EMSCRIPTEN__
-#include <emscripten.h>
+#include <emscripten.h>  //Emscripten allows C/C++ code to be compiled to WebAssembly so that it can run in the web
 #endif  // __EMSCRIPTEN__
 #include <SDL.h>
 
-#include <cstdlib>
-#include <filesystem>
 #include <iostream>
 #include <libtcod.hpp>
 
@@ -12,71 +10,72 @@
 #pragma warning(disable : 4297)  // Allow "throw" in main().  Letting the compiler handle termination.
 #endif
 
-/// Return the data directory.
-auto get_data_dir() -> std::filesystem::path {
-  static auto root_directory = std::filesystem::path{"."};  // Begin at the working directory.
-  while (!std::filesystem::exists(root_directory / "data")) {
-    // If the current working directory is missing the data dir then it will assume it exists in any parent directory.
-    root_directory /= "..";
-    if (!std::filesystem::exists(root_directory)) {
-      throw std::runtime_error("Could not find the data directory.");
+std::filesystem::path getDataDirectory() {
+    static auto root = std::filesystem::path{"."};  // Begin at the working directory.
+    while (!std::filesystem::exists(root / "data")) {
+        // If the current working directory is missing the data dir then it will assume it exists in any parent
+        // directory.
+        root /= "..";
+        if (!std::filesystem::exists(root)) {
+            throw std::runtime_error("Could not find the data directory.");
+        }
     }
-  }
-  return root_directory / "data";
+    return root / "data";
 };
 
-static tcod::Console g_console;  // The global console object.
-static tcod::Context g_context;  // The global libtcod context.
+// global console and context objects, they only exist inside this translation unit
+static tcod::Console console;
+static tcod::Context context;
 
-/// Game loop.
-void main_loop() {
-  // Rendering.
-  g_console.clear();
-  tcod::print(g_console, {0, 0}, "Hello World", TCOD_white, std::nullopt);
-  g_context.present(g_console);
+void gameLoop() {
+    console.clear();
+    tcod::print(console, {0, 0}, "Hello World", std::nullopt, std::nullopt);
+    context.present(console);
 
-  // Handle input.
-  SDL_Event event;
+    // handle input
+    SDL_Event event;
 #ifndef __EMSCRIPTEN__
-  // Block until events exist.  This conserves resources well but isn't compatible with animations or Emscripten.
-  SDL_WaitEvent(nullptr);
+    // block until an event happens, not compatible with Emscripten
+    SDL_WaitEvent(nullptr);
 #endif
-  while (SDL_PollEvent(&event)) {
-    switch (event.type) {
-      case SDL_QUIT:
-        std::exit(EXIT_SUCCESS);
-        break;
+
+    while (SDL_PollEvent(&event)) {
+        switch (event.type) {
+            case SDL_QUIT:
+                std::exit(EXIT_SUCCESS);
+        }
     }
-  }
 }
 
-/// Main program entry point.
 int main(int argc, char** argv) {
-  try {
-    auto params = TCOD_ContextParams{};
-    params.tcod_version = TCOD_COMPILEDVERSION;
-    params.argc = argc;
-    params.argv = argv;
-    params.renderer_type = TCOD_RENDERER_SDL2;
-    params.vsync = 1;
-    params.sdl_window_flags = SDL_WINDOW_RESIZABLE;
-    params.window_title = "Libtcod Template Project";
+    try {
+        console = tcod::Console{80, 40};
 
-    auto tileset = tcod::load_tilesheet(get_data_dir() / "dejavu16x16_gs_tc.png", {32, 8}, tcod::CHARMAP_TCOD);
-    params.tileset = tileset.get();
+        auto params = TCOD_ContextParams{};
+        params.tcod_version = TCOD_COMPILEDVERSION;
+        params.console = console.get();
+        params.window_title = "Yet another roguelike";
+        params.sdl_window_flags = SDL_WINDOW_RESIZABLE;
+        params.vsync = true;
+        params.argc = argc;
+        params.argv = argv;
 
-    g_console = tcod::Console{80, 40};
-    params.console = g_console.get();
+        auto tileset = tcod::load_tilesheet(getDataDirectory() / "dejavu16x16_gs_tc.png", {32, 8}, tcod::CHARMAP_TCOD);
 
-    g_context = tcod::Context(params);
+        params.tileset = tileset.get();
+
+        context = tcod::Context(params);
 
 #ifdef __EMSCRIPTEN__
-    emscripten_set_main_loop(main_loop, 0, 0);
+        emscripten_set_main_loop(gameLoop, 0, 0);
 #else
-    while (true) main_loop();
+        while (true) {
+            gameLoop();
+        }
 #endif
-  } catch (const std::exception& exc) {
-    std::cerr << exc.what() << "\n";
-    throw;
-  }
+
+    } catch (const std::exception& error) {
+        std::cerr << error.what() << "\n";
+        throw;
+    }
 }

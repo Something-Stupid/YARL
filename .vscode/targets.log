@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 06 21:14:06 2022
+# Make data base, printed on Mon Aug 08 16:25:06 2022
 
 # Variables
 
@@ -25,9 +25,7 @@ VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
 LOCALAPPDATA = C:\Users\ian\AppData\Local
 # environment
-WSLENV = WT_SESSION::WT_PROFILE_ID
-# environment
-VSCODE_CWD = E:\dev\ASCII-Game
+VSCODE_CWD = C:\Users\ian\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -35,13 +33,13 @@ SYSTEMROOT = C:\WINDOWS
 # environment
 PROCESSOR_LEVEL = 21
 # environment
-PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12064_RTXIZKNISMOKZPVM
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10384_FRMEXIDVDRMFSNWP
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
@@ -55,7 +53,7 @@ VK_SDK_PATH = C:\VulkanSDK\1.2.170.0
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\ian\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = C:\Users\ian\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 LANG = C
 # default
@@ -75,7 +73,7 @@ INTELLIJ IDEA COMMUNITY EDITION = C:\Program Files\JetBrains\IntelliJ IDEA Commu
 # makefile
 CURDIR := e:/dev/ASCII-Game
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -95,11 +93,9 @@ MAKEFILE_LIST :=
 # environment
 PT8HOME = C:\Program Files\Cisco Packet Tracer 8.0.1
 # environment
-VSCODE_PID = 12064
+VSCODE_PID = 10384
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
-# environment
-WT_PROFILE_ID = {0caa0dad-35be-5f56-a8ff-afceeeaa6101}
 # automatic
 *F = $(notdir $*)
 # automatic
@@ -129,7 +125,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\VulkanSDK\1.2.170.0\Bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\VulkanSDK\1.2.182.0\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\SlikSvn\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\CMake\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\dev\TextBasedGame\dependencies\SDL\lib\x86;C:\Program Files (x86)\WinMerge;C:\Program Files\Git\cmd;C:\Program Files\LLVM\bin;C:\Program Files\qemu;C:\Program Files\PuTTY\;C:\Program Files\Git LFS;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\IncrediBuild;C:\Users\ian\.cargo\bin;C:\Users\ian\AppData\Local\Microsoft\WindowsApps;C:\Users\ian\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2\bin;C:\Users\ian\.dotnet\tools;C:\msys64\mingw64\bin;C:\Users\ian\AppData\Roaming\npm;C:\tools\dart-sdk\bin;C:\Users\ian\AppData\Roaming\Pub\Cache\bin;C:\Users\ian\AppData\Local\Programs\mongosh\
+PATH = C:\VulkanSDK\1.2.170.0\Bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\VulkanSDK\1.2.182.0\Bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\SlikSvn\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\CMake\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\dev\TextBasedGame\dependencies\SDL\lib\x86;C:\Program Files (x86)\WinMerge;C:\Program Files\Git\cmd;C:\Program Files\LLVM\bin;C:\Program Files\qemu;C:\Program Files\PuTTY\;C:\Program Files\Git LFS;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\IncrediBuild;C:\Users\ian\.cargo\bin;C:\Users\ian\AppData\Local\Microsoft\WindowsApps;C:\Users\ian\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2\bin;;C:\Users\ian\.dotnet\tools;C:\msys64\mingw64\bin;C:\Users\ian\AppData\Roaming\npm;C:\tools\dart-sdk\bin;C:\Users\ian\AppData\Roaming\Pub\Cache\bin;C:\Users\ian\AppData\Local\Programs\mongosh\
 # environment
 COMPUTERNAME = THETARDIS
 # default
@@ -142,8 +138,6 @@ PROMPT = $P$G
 CHOCOLATEYLASTPATHUPDATE = 132859118089548332
 # environment
 QT_DEVICE_PIXEL_RATIO = auto
-# environment
-WT_SESSION = af37573a-f450-4343-81ac-5270351a022f
 # environment
 LOGONSERVER = \\THETARDIS
 # environment
@@ -199,7 +193,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\ian\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\b2cae8f83cb1e1e03061f199ff4bd801-1.69.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\b2cae8f83cb1e1e03061f199ff4bd801-1.70.0-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -209,9 +203,7 @@ SUFFIXES :=
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
+SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -221,7 +213,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
 # variable set hash-table stats:
-# Load=104/1024=10%, Rehash=0, Collisions=9/128=7%
+# Load=100/1024=10%, Rehash=0, Collisions=9/124=7%
 
 # Pattern-specific Variable Values
 
@@ -229,9 +221,9 @@ PROCESSOR_IDENTIFIER = AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
 
 # Directories
 
-# . (key e:/dev/ASCII-Game, mtime 1659834659): 18 files, no impossibilities.
+# . (key e:/dev/ASCII-Game, mtime 1659912778): 21 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 21 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -288,12 +280,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 229 B / avg = 9 B
-# current buf: size = 8174 B / used = 229 B / count = 25 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 248 B / avg = 8 B
+# current buf: size = 8174 B / used = 248 B / count = 28 / avg = 8 B
 
-# strcache performance: lookups = 28 / hit rate = 10%
+# strcache performance: lookups = 31 / hit rate = 9%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Sat Aug 06 21:14:06 2022
+# Load=28/8192=0%, Rehash=0, Collisions=0/31=0%
+# Finished Make data base on Mon Aug 08 16:25:06 2022
 
  
