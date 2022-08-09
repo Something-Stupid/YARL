@@ -2,10 +2,13 @@
 
 #include <iostream>
 
+// TODO: figure out input system
 void Engine::processInput() {
-    switch (inputManager.processInput().type) {
-        case ActionType::MOVEMENT:
-            (MovementAction) action break;
+    auto action = inputManager.processInput();
+    switch (action.type) {
+        case ActionType::MOVEMENT: {
+            player->position.x +=
+        }
     }
 }
 
