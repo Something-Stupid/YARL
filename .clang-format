@@ -1,14 +1,11 @@
+﻿---
 BasedOnStyle: Google
-IndentWidth: 4
-ColumnLimit: 120
+AccessModifierOffset: '-4'
+ColumnLimit: '120'
+IndentWidth: '4'
 Language: Cpp
-
-# Use C++ style pointer alignments.
-DerivePointerAlignment: false
+NamespaceIndentation: All
 PointerAlignment: Left
+SpaceBeforeInheritanceColon: 'true'
 
-# Less-compact, but more Git friendly style options.
-AlignAfterOpenBracket: AlwaysBreak
-BinPackArguments: false
-BinPackParameters: false
-AlignTrailingComments: false
+...
