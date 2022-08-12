@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
         emscripten_set_main_loop(engine.gameLoop(), 0, 0);
 #else
         while (true) {
-            engine.processInput();
+            engine.getInput();
             engine.render();
         }
 #endif

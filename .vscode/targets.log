@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 08 16:25:06 2022
+# Make data base, printed on Thu Aug 11 18:56:25 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10384_FRMEXIDVDRMFSNWP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5140_CFDZPOJHRHOROQRY
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
@@ -53,7 +53,7 @@ VK_SDK_PATH = C:\VulkanSDK\1.2.170.0
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\ian\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
+VSCODE_CODE_CACHE_PATH = C:\Users\ian\AppData\Roaming\Code\CachedData\6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LANG = C
 # default
@@ -73,7 +73,7 @@ INTELLIJ IDEA COMMUNITY EDITION = C:\Program Files\JetBrains\IntelliJ IDEA Commu
 # makefile
 CURDIR := e:/dev/ASCII-Game
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST :=
 # environment
 PT8HOME = C:\Program Files\Cisco Packet Tracer 8.0.1
 # environment
-VSCODE_PID = 10384
+VSCODE_PID = 5140
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -103,7 +103,8 @@ VSCODE_PID = 10384
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-ONEDRIVECONSUMER = C:\Users\ian\OneDrive
+ONEDRIVECONSUMER = C:\Users\ian\OneDrive 
+
 # default
 MAKE_HOST := Windows32
 # environment
@@ -162,11 +163,14 @@ GNUMAKEFLAGS :=
 GIT_LFS_PATH = C:\Program Files\Git LFS
 # environment
 OS = Windows_NT
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := 
 # default
 MAKE_VERSION := 4.3
-# environment
+# environm 
+ent
 PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 USERDOMAIN_ROAMINGPROFILE = THETARDIS
@@ -193,7 +197,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\ian\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\b2cae8f83cb1e1e03061f199ff4bd801-1.70.0-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\b2cae8f83cb1e1e03061f199ff4bd801-1.70.1-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -213,7 +217,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
 # variable set hash-table stats:
-# Load=100/1024=10%, Rehash=0, Collisions=9/124=7%
+# Load=101/1024=10%, Rehash=0, Collisions=9/125=7%
 
 # Pattern-specific Variable Values
 
@@ -221,7 +225,7 @@ PROCESSOR_IDENTIFIER = AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
 
 # Directories
 
-# . (key e:/dev/ASCII-Game, mtime 1659912778): 21 files, no impossibilities.
+# . (key e:/dev/ASCII-Game, mtime 1659996793): 21 files, no impossibilities.
 
 # 21 files, no impossibilities in 1 directories.
 
@@ -286,6 +290,6 @@ GNUmakefile:
 # strcache performance: lookups = 31 / hit rate = 9%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Mon Aug 08 16:25:06 2022
+# Finished Make data base on Thu Aug 11 18:56:25 2022
 
  

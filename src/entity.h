@@ -1,11 +1,12 @@
 #pragma once
 
 #include <libtcod.hpp>
+#include <string>
 
-#include "vector.h"
+#include "vectors.h"
 
 struct Entity {
-    int character;
-    TCOD_ColorRGBA foreground;
+    std::string character;
+    TCOD_ColorRGB foreground;
     Vector2 position;
 };
